@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/photoswipe.css">
+    <title>Album</title>
+</head>
+<body>
+    <div class="container">
+        <a class="style" href="./albums.html">Back to Albums</a>
+    </div>
+    <div id="gallery"></div>
+    <script type="module">
+        import PhotoSwipeLightbox from './util/photoswipe-lightbox.esm.js'
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#gallery',
+            children: 'a',
+            pswpModule: () => import('./util/photoswipe.esm.js')
+          });
+        
+        lightbox.init()
+    </script>
+    <script type="module" src="./js/album-script.js"></script>
+</body>
+</html>

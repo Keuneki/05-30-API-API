@@ -1,0 +1,70 @@
+/*! PhotoSwipe main CSS by Dmytro Semenov | photoswipe.com */
+
+/* Variable Definitions */
+:root {
+  --pswp-bg: #000;
+  --pswp-placeholder-bg: #222;
+  --pswp-root-z-index: 100000;
+  --pswp-preloader-color: rgba(79, 79, 79, 0.4);
+  --pswp-preloader-color-secondary: rgba(255, 255, 255, 0.9);
+  --pswp-icon-color: #fff;
+  --pswp-icon-color-secondary: #4f4f4f;
+  --pswp-icon-stroke-color: #4f4f4f;
+  --pswp-icon-stroke-width: 2px;
+  --pswp-error-text-color: var(--pswp-icon-color);
+}
+
+/* Styles for basic PhotoSwipe (pswp) functionality (sliding area, open/close transitions) */
+
+.pswp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--pswp-root-z-index);
+  display: none;
+  touch-action: none;
+  opacity: 0.003;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  contain: layout style size;
+  outline: 0;
+}
+
+.pswp__bg {
+  opacity: 0.005;
+  background: var(--pswp-bg);
+  transition: opacity var(--pswp-transition-duration) cubic-bezier(0.4, 0, 0.22, 1);
+}
+
+.pswp--ui-visible .pswp__hide-on-close {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity var(--pswp-transition-duration) cubic-bezier(0.4, 0, 0.22, 1);
+}
+
+.pswp__container,
+.pswp__img,
+.pswp__button,
+.pswp__counter {
+  user-select: none;
+}
+
+.pswp__content > * {
+  pointer-events: auto;
+}
+
+@media (max-width: 767px) {
+  .pswp__top-bar {
+    /* Styles specific to smaller screens */
+  }
+}
+
+.pswp {
+  contain: layout style size;
+}
+
+.pswp:focus,
+.pswp__icn:focus {
+  outline: 0;
+}
