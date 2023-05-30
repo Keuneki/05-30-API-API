@@ -93,8 +93,8 @@ a:hover {
 
 #menu {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: center;
 }
 
 .menu-list {
@@ -131,19 +131,29 @@ a:hover {
   transform: scale(1.05);
 }
 
-.album-list {
+.album-list,
+.post-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.album-content {
+.album-content
+{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 150px;
   height: 100%;
 }
+
+.album-column {
+  width: 50%;
+  float: left;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
 
 .column {
   flex: 1;
