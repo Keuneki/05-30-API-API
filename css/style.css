@@ -8,7 +8,7 @@ body {
 
 .container {
   font-family: Arial, sans-serif;
-  max-width: 800px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -17,12 +17,14 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .column {
   flex: 1;
 }
-
 
 h2 {
   margin-bottom: 10px;
@@ -41,10 +43,11 @@ li {
 a {
   text-decoration: none;
   color: darkcyan;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: darkslateblue;
 }
 
 .column-content {
@@ -59,14 +62,8 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.posts-container {
-  border-left: 4px solid darkcyan;
-}
-
-.albums-container {
-  border-left: 4px solid darkcyan;
-}
-
+.posts-container,
+.albums-container,
 .users-container {
   border-left: 4px solid darkcyan;
 }
@@ -94,17 +91,16 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 #menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .menu-list {
   display: flex;
   list-style-type: none;
-  gap: 10px;
+  gap: 22px;
 }
 
 .menu-list a {
@@ -149,7 +145,42 @@ a:hover {
   height: 100%;
 }
 
-.album-content:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
+.column {
+  flex: 1;
+}
+
+.column-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.column-content:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.page-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.page-links a {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.page-links a.current-page {
+  background-color: #333;
+  color: #fff;
+}
+
+.top-margin {
+  display: inline-block;
 }
